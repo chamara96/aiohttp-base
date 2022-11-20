@@ -1,0 +1,20 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger OpenAPI UI
+  version: "1.0.0"
+  title: Base Project
+
+servers:
+  - url: /api
+
+# Paths supported by the server application
+paths:
+  /healthcheck:
+    get:
+      operationId: app.api.healthcheck
+      summary: Readiness check
+      tags:
+        - healthcheck
+      responses:
+        "200": {description: Success}
+        "500": {description: Failure}
